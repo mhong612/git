@@ -8,9 +8,48 @@ body{
 *{
     color: #77dd77;
 }
+img{
+    width: 500px;
+}
 a{
     color: #84b6f4;
-    font-size: 30px;
-    background-color:#fdcae1 ;
-    font-family: sans-serif;
+}
+h2{
+    width: auto;
+    border: solid 10px #fdcae1;
+     
+}
+#icono {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 50px;
+}
+header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+menu{
+    list-style-type: none;
+}
+menu > a > li{
+    display: inline;
+    
+}
+#columnaright{
+    width: 50%;
+    float: right;
+}
+#columnaleft{
+    width: 50%;
+    float: left;
+}
+#logo {
+    width: 2%;
+    
+}
+footer{
+    position: fixed;
+    bottom: 0px;
 }
