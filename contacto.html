@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilojs.css">
+    <title>MAS INFORMACION</title>
+</head>
+<body>
+    <div class="contenedor">
+        <form onsubmit="enviarEmail(); reset(); return false">
+            <h3>Para mantenerte informado</h3>
+            <input type="text" id="nombre" placeholder="Tu Nombre" required>
+            <input type="email" id="email" placeholder="Tu Email" required>
+            <input type="text" id="numero" placeholder="Tu Numero" required>
+            <textarea  id="mensaje"  rows="5" placeholder="Con que te podemos ayudar?"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function enviarEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "maxihong704@gmail.com",
+                Password : "2364A10B678923A4F9509F25ADB207E3035C",
+                To : 'maxihongg@gmail.com',
+                From : document.getElementById('email').value,
+                Subject : "Nuevo contacto",
+                Body : "Name: " + document.getElementById('nombre').value
+                + '<br> Email: ' + document.getElementById('email')
+                + '<br> Numero: ' + document.getElementById('numero')
+                + '<br> Mensaje: ' + document.getElementById('mensaje')
+                }).then(
+                message => alert('Mensaje Enviado Correctamente')
+                );
+            }
+    </script>
+</body>
+</html>
